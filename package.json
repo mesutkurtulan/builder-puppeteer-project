@@ -1,0 +1,27 @@
+{
+  "name": "builder-puppeteer-project",
+  "version": "1.0.0",
+  "description": "Puppeteer Framework with Mocha Steps and Builder Class ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --timeout=30000 --require mocha-steps ./build/tests/**.js",
+    "clear": "del -rf build",
+    "build": "babel --preset es2015 -d build/ src/"
+  },
+  "keywords": [
+    "Puppeteer",
+    "Mocha"
+  ],
+  "author": "Mesut Kurtulan",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "mocha-steps": "^1.3.0",
+    "puppeteer": "^10.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
